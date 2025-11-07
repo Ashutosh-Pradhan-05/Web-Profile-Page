@@ -86,28 +86,7 @@ body {
   }
 
   .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 220px;
-    height: 100vh;
-    background: rgba(17, 17, 17, 0.97);
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5rem;
-    gap: 1.2rem;
-    border-left: 3px solid #0078ff;
-  }
-
-  .menu-toggle:checked ~ .nav-menu {
-    right: 0;
-  }
-
-  .menu-toggle:checked + .menu-icon .fa-bars {
     display: none;
-  }
-  .menu-toggle:checked + .menu-icon .fa-xmark {
-    display: inline-block;
   }
 
   .nav-link {
@@ -241,10 +220,11 @@ h2 {
   transform: translateY(-5px);
 }
 
+/* style started from contact section */
 .contact-card {
   width: 100%;
-  max-width: 450px;
-  background: #0d081f;
+  max-width: 900px;
+  background: #0d6efd;
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid #444;
@@ -268,16 +248,14 @@ h2 {
   font-size: 1.5rem;
 }
 
-/* Divider */
 .divider {
-  width: 120px;
+  width: 320px;
   height: 4px;
   background: linear-gradient(to right, #8245ec, #ff7f50);
   margin: 0.5rem auto 1.5rem auto;
   border-radius: 2px;
 }
 
-/* Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -289,7 +267,7 @@ h2 {
   width: 100%;
   padding: 0.9rem 1rem;
   border-radius: 8px;
-  background: #131025;
+  background: #70a1eb;
   border: 1px solid #555;
   color: #fff;
   font-size: 0.95rem;
@@ -322,20 +300,42 @@ h2 {
 
 .send-btn:hover {
   transform: scale(1.05);
-  background: linear-gradient(to right, #0078ff, #0078ff);
+  background: linear-gradient(to right, #31ed5d, #c6ec1d);
 }
 
 .send-btn i {
   font-size: 1rem;
 }
 
-/* Responsive */
+.info-container {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: blue;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.info-container i {
+  margin-right: 8px;
+  font-size: 1.5rem;
+  color: #0d6efd;
+}
+.info-container a {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
 @media (max-width: 500px) {
   .contact-card {
     padding: 1.5rem;
   }
   .divider {
     width: 100px;
+  }
+  .info-container p {
+    text-align: left;
+  }
+  .info-container a {
+    font-size: 0.9rem;
   }
 }
 .contact a {
@@ -349,12 +349,14 @@ h2 {
 }
 
 .social-icons {
+  font-size: 30px;
   margin-top: 1.2rem;
+  text-align: center;
 }
 
 .social-icons a {
   display: inline-block;
-  margin-right: 12px;
+  margin-right: 6px;
 }
 
 .social-icons i {
