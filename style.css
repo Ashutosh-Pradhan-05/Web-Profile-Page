@@ -148,7 +148,7 @@ body {
 
 .tagline {
   font-style: normal;
-  font-size: 1rem;
+  font-size: 1.5rem;
   opacity: 0.9;
 }
 
@@ -219,7 +219,21 @@ h2 {
   background: #eaf4ff;
   transform: translateY(-5px);
 }
-
+.certificate-list li,
+.qualification-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+.btn-certificate {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
 /* style started from contact section */
 .contact-card {
   width: 100%;
@@ -329,7 +343,7 @@ h2 {
     padding: 1.5rem;
   }
   .divider {
-    width: 100px;
+    width: 200px;
   }
   .info-container p {
     text-align: left;
@@ -339,6 +353,9 @@ h2 {
   }
   .scroll-top {
     padding: 10px 10px;
+  }
+  .tagline {
+    font-size: 0.9rem;
   }
 }
 .contact a {
@@ -412,6 +429,7 @@ h2 {
 
   .full-stack {
     display: block;
+    font-size: 1.2rem;
   }
 
   .skills-grid {
