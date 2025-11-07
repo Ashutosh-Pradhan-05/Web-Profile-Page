@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: #eef3f8;
+  color: #333;
+  line-height: 1.7;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(17, 17, 17, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+}
+
+.nav-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0078ff;
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #8b00ff;
+  transform: scale(1.5);
+}
+.header {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 5rem 1rem 3rem;
+  background: linear-gradient(120deg, #0078ff, #00c6ff);
+  overflow: hidden;
+}
+
+.header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #f9d423, #ff4e50);
+  font-family: "Playwrite HU", cursive;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-style: normal;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  color: #0078ff;
+  margin-bottom: 1rem;
+  border-left: 5px solid #00c6ff;
+  padding-left: 10px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.skills-grid span {
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skills-grid span:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #00c6ff, #0078ff);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #f9fbff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  border-left: 5px solid #0078ff;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background: #eaf4ff;
+  transform: translateY(-5px);
+}
+
+.contact a {
+  color: #0078ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 1.2rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.social-icons i {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.5);
+  box-shadow: 0 4px 10px rgba(0, 120, 255, 0.3);
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(120deg, #0078ff, #00c6ff);
+  color: white;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 700px) {
+  .nav-menu {
+    flex-direction: column;
+    background: rgba(17, 17, 17, 0.95);
+    position: absolute;
+    top: 60px;
+    right: -200px;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: right 0.3s ease;
+  }
+
+  .profile-pic {
+    height: 200px;
+    width: 200px;
+  }
+
+  .header h1 {
+    font-size: 1.92rem;
+  }
+  .separator {
+    display: none;
+  }
+
+  .full-stack {
+    display: block;
+  }
+
+  .skills-grid {
+    justify-content: center;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
