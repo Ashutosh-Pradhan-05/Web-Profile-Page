@@ -337,6 +337,9 @@ h2 {
   .info-container a {
     font-size: 0.9rem;
   }
+  .scroll-top {
+    padding: 10px 10px;
+  }
 }
 .contact a {
   color: #0078ff;
@@ -369,12 +372,29 @@ h2 {
 }
 
 .footer {
+  position: relative;
   text-align: center;
-  padding: 1.5rem;
-  background: linear-gradient(120deg, #0078ff, #00c6ff);
-  color: white;
-  font-size: 0.95rem;
-  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background-color: #111;
+  color: #fff;
+}
+
+.scroll-top {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.scroll-top:hover {
+  background: #8245ec;
+  transform: scale(1.2);
 }
 
 @media (max-width: 700px) {
