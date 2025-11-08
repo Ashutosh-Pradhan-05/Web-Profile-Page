@@ -38,8 +38,7 @@ This project is a clean, responsive personal profile page that highlights profes
 / (project root)
 ├─ index.html            # Main HTML file (already provided)
 ├─ style.css             # Main stylesheet (create/upload this file)
-├─ profile.jpg           # Profile image
-├─ Portfolio-icon.png    # Favicon (optional)
+├─ images/               # Contains all image assets (Certificate images,Academic logos, profile picture, Favicon etc.)
 └─ README.md             # This file
 ```
 
