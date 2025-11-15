@@ -90,7 +90,7 @@ body {
 }
 
 /* This the style for responsiveness of navbar in mobile view */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .menu-icon {
     display: block;
   }
@@ -137,7 +137,7 @@ body {
   color: #fff;
   padding: 5rem 1rem 3rem;
   background: linear-gradient(120deg, #0078ff, #00c6ff);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .header .overlay {
@@ -620,5 +620,15 @@ h2 {
 
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  @media (max-width: 376px) {
+    .footer-emoji {
+      display: none;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .footer-copy {
+    display: block;
   }
 }
