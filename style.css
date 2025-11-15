@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* Body style sheet added */
 body {
   font-family: "Poppins", "Segoe UI", sans-serif;
   background: #eef3f8;
@@ -131,58 +131,157 @@ body {
   }
 }
 
+/* Header style added */
 .header {
   position: relative;
   text-align: center;
+  padding: 6rem 1rem 4rem;
   color: #fff;
-  padding: 5rem 1rem 3rem;
   background: linear-gradient(120deg, #0078ff, #00c6ff);
-  /* overflow: hidden; */
+  overflow: hidden;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
-.header .overlay {
+.header::before,
+.header::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.15);
-}
-
-.header-content {
-  position: relative;
-  z-index: 2;
-}
-
-.profile-pic {
+  background: rgba(255, 255, 255, 0.15);
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 5px solid #fff;
+  filter: blur(80px);
+  animation: float 6s infinite ease-in-out;
+}
+
+.header::before {
+  top: -60px;
+  left: -40px;
+}
+.header::after {
+  bottom: -60px;
+  right: -40px;
+  animation-delay: 2s;
+}
+.header .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+.header-content {
+  position: relative;
+  z-index: 10;
+  animation: slideUp 1.2s ease;
+}
+
+.profile-pic {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 6px solid #fff;
   object-fit: cover;
   margin-bottom: 1rem;
-  transition: transform 0.3s ease;
+  transition: 0.4s ease-in-out;
+  animation: floatPic 4s infinite ease-in-out;
 }
 
 .profile-pic:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
 }
 
 .header h1 {
-  font-size: 2.8rem;
-  letter-spacing: 1px;
-  font-size: 4rem;
+  font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 800;
-  background: linear-gradient(45deg, #f9d423, #ff4e50);
   font-family: "Playwrite HU", cursive;
+
+  background: linear-gradient(45deg, #f9d423, #ff4e50, #f9d423);
+  background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: textMove 5s infinite linear;
 }
 
 .tagline {
-  font-style: normal;
-  font-size: 1.5rem;
-  opacity: 0.9;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  opacity: 0.95;
+  margin-top: 0.3rem;
+}
+
+.company-name:hover {
+  color: rgb(140, 0, 255);
+  text-decoration: underline;
+  transition: 0.3s ease;
+}
+
+.separator {
+  margin: 0 8px;
+}
+/* Media query for responsiveness of header section */
+@media (max-width: 700px) {
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .full-stack {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatPic {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(40px, -20px);
+  }
+}
+
+@keyframes textMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
 }
 
 .container {
@@ -601,30 +700,13 @@ h2 {
 }
 
 @media (max-width: 700px) {
-  .profile-pic {
-    height: 200px;
-    width: 200px;
-  }
-
-  .header h1 {
-    font-size: 1.92rem;
-  }
-  .separator {
-    display: none;
-  }
-
-  .full-stack {
-    display: block;
-    font-size: 1.2rem;
-  }
-
   .project-grid {
     grid-template-columns: 1fr;
   }
-  @media (max-width: 376px) {
-    .footer-emoji {
-      display: none;
-    }
+}
+@media (max-width: 376px) {
+  .footer-emoji {
+    display: none;
   }
 }
 @media (max-width: 500px) {
