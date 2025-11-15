@@ -283,13 +283,13 @@ body {
     background-position: 200%;
   }
 }
-
+/* This container is used for the main content sections */
 .container {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
-
+/* Card is used for both about and skill section  */
 .card {
   background: #fff;
   border-radius: 10px;
@@ -311,26 +311,74 @@ h2 {
   padding-left: 10px;
 }
 
+/* Skill section style started */
+.skills-category {
+  margin-bottom: 2rem;
+}
+
+.skills-category h3 {
+  font-size: 1.3rem;
+  color: #0078ff;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  position: relative;
+}
+
+/* Small underline bar */
+.skills-category h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 3px;
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+  border-radius: 5px;
+}
+.ft-h::after {
+  width: 200px;
+}
+.bt-h::after {
+  width: 200px;
+}
+.db-h::after {
+  width: 100px;
+}
+.dt-h::after {
+  width: 150px;
+}
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 1rem;
 }
 
 .skills-grid span {
   background: linear-gradient(135deg, #0078ff, #00c6ff);
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.55rem 1.1rem;
   border-radius: 25px;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .skills-grid span:hover {
   transform: scale(1.1);
   background: linear-gradient(135deg, #00c6ff, #0078ff);
+  box-shadow: 0 4px 10px rgba(0, 118, 255, 0.3);
+}
+
+@media (max-width: 600px) {
+  .skills-category h3 {
+    font-size: 1.15rem;
+  }
+
+  .skills-grid span {
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+  }
 }
 
 .project-grid {
